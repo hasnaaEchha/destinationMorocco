@@ -1,0 +1,47 @@
+<div class="row visible-md visible-lg">
+    <!--1----Carousel-->
+    <div class="carousel slide col-md-12  " id="theCarousel" data-interval="4000">
+        <!--4----Carousel-->
+        <ol class="carousel-indicators">
+            <li data-target="#theCarousel" data-slide-to="0"></li>
+            <li data-target="#theCarousel" data-slide-to="1"></li>
+            <li data-target="#theCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!--2----Carousel-->
+        <div class="carousel-inner">
+            <!--3----Carousel-->
+            <div class="item active">  <!--active----Carousel-->
+                <img src="../../contents/images/1.jpg" alt="1" class="img-thumbnail img-thumbnail-list"/>
+                <!--5----Carousel-->
+                <div class="carousel-caption">
+
+                    <h1 style="color: #f7ecb5">Trouver son chemin facilement </h1>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="../../contents/images/2.jpg" alt="2" class="img-thumbnail img-thumbnail-list"/>
+                <div class="carousel-caption">
+                    <h1 style="color: #f7ecb5">Optimiser son temps et son budget</h1>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="../../contents/images/3.jpg" alt="3" class="img-thumbnail img-thumbnail-list"/>
+                <div class="carousel-caption">
+
+                    <h1 style="color: #f7ecb5">Choisir le moyen de transport adéquat</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div  id="collapseExample">
+    <div class="jumbotron" id="welcome">
+        <div ui-view></div>
+    </div>
+</div>
+
+<script>$('#theCarousel').carousel();</script>

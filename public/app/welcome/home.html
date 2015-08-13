@@ -1,0 +1,36 @@
+<header>
+    <div class="navbar navbar-default">
+        <div class="navbar-header">
+            <div id="logo"><a class="btn" href="#"><h1><em class="logo-title">Gol lina fin baghi tamchi ?</em></h1></a></div>
+            <button class="btn navbar-toggle" data-toggle="collapse"  data-target=".navbar-collapse"><span class="glyphicon glyphicon-chevron-down"></span></button>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav "><a class="btn title-navbar" ui-sref="home.accueil.welcome"   >Home</a></li>
+                <li  class="nav"><a  class="btn title-navbar"  ui-sref=".list.questions"  >Fin bari tamchi ?</a>
+                </li>
+                <li class="nav"><a class="title-navbar btn " ui-sref=".accueil.contact" > Contacer nous</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<section class=" container col-md-8 col-md-offset-2" >
+
+
+    <div ui-view></div>
+
+
+</section>
+
+<script>$('#theCarousel').carousel();</script>
+
+<footer  class="container">
+
+    <div  class="navbar navbar-default col-md-12">
+
+        <div class="footer-copyright text-muted col-md-3 col-md-offset-4"><strong>Copyright © Hasnaa-ECH 2015</strong></div>
+
+
+
+    </div>
+</footer>

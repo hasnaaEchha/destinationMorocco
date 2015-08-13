@@ -1,0 +1,15 @@
+<form class="navbar-form " role="search">
+    <div class="form-group col-md-10">
+        <input type="text" style="width: 100%" ng-model="vm.query" class="form-control col-md-10" placeholder="Search">
+    </div>
+    <button type="submit" class="btn btn-success ">Rechercher</button>
+</form>
+<div class="list-group" >
+
+    <a ng-repeat="question in vm.questions | orderBy:vm.setOrder|filter:vm.query" ui-sref="list.responses({id:question._id})" class="list-group-item list-group-item-success" style="color:#030303">
+        <span class="badge">{{question.countResponse}}</span>
+        <span class="badge">{{question.ville}}</span>
+        {{question.name}}
+    </a>
+
+</div>

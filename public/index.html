@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html ng-app="welcome">
+<head lang="en" >
+    <meta charset="UTF-8">
+    <title>Fin Baghi Tamchi</title>
+    <!--Style Sheet-->
+    <link href="contents/css/bootstrap.min.css" rel="stylesheet">
+    <link href="contents/css/site.css" rel="stylesheet">
+    <link href="contents/css/toastr.css" rel="stylesheet">
+
+    <!--JQuery file-->
+    <script src="vendors/jquery.min.js"></script>
+    <!--Bootstrap js file-->
+    <script src="vendors/bootstrap.min.js"></script>
+    <!--my js file-->
+
+    <!--Angular script-->
+    <script src="vendors/angular/angular.min.js"></script>
+    <script src="vendors/angular/angular-ui-router.js"></script>
+    <script src="vendors/class.js"></script>
+    <script src="vendors/angular/ui-utils.js"></script>
+    <script src="vendors/angular/angular-resource.js"></script>
+    <script src="vendors/angular/ngStorage.min.js"></script>
+    <script src="vendors/angular/angular-cookies.js"></script>
+    <script src="vendors/angular/d3.min.js"></script>
+    <script src="vendors/angular/angular-charts.min.js"></script>
+    <script src="vendors/angular/d3.min.js"></script>
+    <script src="vendors/toastr.js"></script>
+
+    <!-- ng-app file-->
+    <script src="app/welcome/app.js"></script>
+    <!--directives-->
+
+    <!--controllers-->
+    <script src="app/welcome/HomeCtrl.js"></script>
+    <script src="app/welcome/ListRequestCtrl.js"></script>
+    <script src="app/requests/AskCtrl.js"></script>
+    <script src="app/responses/ListRequestCtrl.js"></script>
+    <script src="app/responses/ResponsesCtrl.js"></script>
+    <script src="app/welcome/ContactCtrl.js"></script>
+
+
+    <!--<services>-->
+
+    <script src="app/commun/services/authInterceptor.js"></script>
+    <script src="app/commun/services/DataResources.js"></script>
+
+    <!---Models-->
+    <script src="app/commun/models/QuestionModel.js"></script>
+    <!---providers-->
+    <script src="app/commun/services/DataResources.js"></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-65133556-2', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+</head>
+<body class="body">
+
+<header>
+    <div class="navbar navbar-default">
+        <div class="navbar-header">
+            <div id="logo"><a class="btn" href="#"><h1><em class="logo-title">Gol lina fin baghi tamchi ?</em></h1></a></div>
+            <button class="btn navbar-toggle" data-toggle="collapse"  data-target=".navbar-collapse"><span class="glyphicon glyphicon-chevron-down"></span></button>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav "><a class="btn title-navbar" ui-sref="accueil.welcome"   >Home</a></li>
+                <li  class="nav"><a  class="btn title-navbar"  ui-sref="list.questions"  >Fin bari tamchi ?</a>
+                </li>
+                <li class="nav"><a class="title-navbar btn " ui-sref="accueil.contact" > Contactez Nous</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<section class=" container col-md-8 col-md-offset-2" >
+
+    <div  ui-view></div>
+
+
+</section>
+
+<script>$('#theCarousel').carousel();</script>
+
+<footer  class="container">
+
+    <div  class="navbar navbar-default col-md-12">
+
+        <div class="footer-copyright text-muted col-md-3 col-md-offset-4"><strong>Copyright © Hasnaa-ECH 2015</strong></div>
+
+
+
+    </div>
+</footer>
+</body>
+</html>

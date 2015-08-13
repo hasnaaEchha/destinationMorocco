@@ -1,0 +1,45 @@
+<div class="bg-info">
+
+    <span class="title2 well-sm "><em>{{vm.question.name}}</em></span>
+    <p class="well ">{{vm.question.description}}
+
+    </p>
+    <footer class="footerComment">{{vm.question.userName}}:<cite title="Comment Date"><span class="date">{{vm.dateConv(vm.question._date)}}</span>
+
+
+
+    </cite></footer>
+</div>
+<h3>Réponse</h3>
+<blockquote ng-repeat="response in vm.responses" class="well">
+    <p>{{response.description}}</p>
+    <footer class="footerComment">{{response.userName}}--- <cite title="Source Title"><span class="date">{{vm.dateConv(response._date)}}</span></cite></footer>
+</blockquote>
+<textarea ng-hide="vm.repondre" class="form-control" ng-click="vm.toggleRepondre()" rows="3" placeholder="aidez le ...."></textarea>
+
+<form ng-show="vm.repondre" name="responseForm" class="form-horizontal">
+    <div class="form-group">
+        <label for="name" class="col-sm-1 control-label">Nom *</label>
+        <div class="col-sm-10">
+            <input type="text" ng-model="vm.response.userName"class="form-control" id="name" placeholder="nom" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-1 control-label">Email (optionel)</label>
+        <div class="col-sm-10">
+            <input type="email" ng-model="vm.response.email" class="form-control" id="inputEmail3" placeholder="Email">
+        </div>
+    </div>
+    <div class="form-group ">
+        <label for="inputResponse" class="col-sm-1 control-label">Réponse</label>
+        <div class="col-sm-10">
+            <textarea class="form-control" ng-model="vm.response.description" id="inputResponse" placeholder="" required></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-1 col-sm-10">
+            <button type="submit" ng-click="vm.save()" ng-disabled="responseForm.$invalid" class="btn btn-default">Envoyer</button>
+        </div>
+    </div>
+</form>
+<!--pour les réponses je vais utilise Blockote-->
